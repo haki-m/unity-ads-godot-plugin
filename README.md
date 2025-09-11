@@ -123,6 +123,11 @@ You can try the plugin instantly with the **demo project**:
   1. Open the `demo-unity-ads` project in Godot 4.5.beta4  
   2. Enable the **UnityAds_By_Hakim** plugin  
   3. Run the scene to see test ads (interstitial and banner) in action  
+ ## 🎥 Demo Video
+
+[![Unity Ads Godot Demo](https://img.youtube.com/vi/l5BOYemdmLY/0.jpg)](https://youtu.be/l5BOYemdmLY)
+
+👉 Watch the full demo here: https://youtu.be/l5BOYemdmLY
 
 > ⚠️ Remember: Internet & network access must be enabled in the Android export template for ads to load.
 ## License
