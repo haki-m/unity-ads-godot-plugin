@@ -47,7 +47,6 @@ func _on_ad_show_complete(state):
 
 func _on_banner_loaded(placement_id):
 	emit_signal("banner_loaded", placement_id)
-	show_banner()
 
 func _on_banner_failed(message):
 	emit_signal("banner_failed", message)
