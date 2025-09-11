@@ -40,6 +40,7 @@ It provides a **custom node** for interstitial and banner ads, with **automatic 
 - Android SDK (API 24+)  
 - Unity Ads **account** & **Game ID**  
 - Android export templates installed  
+- ⚠️ **Internet & Network Access must be enabled** in the Android export templates to allow ads to load  
 
 ---
 
@@ -106,9 +107,24 @@ Connect a UI button to show an interstitial ad:
 - Automatically includes the required **AAR** file  
 - Adds **Unity Ads SDK v4.16.1** dependency to Gradle  
 - ⚡ No manual changes needed — just enable the plugin and export  
+- ⚠️ **Ensure “Internet” and “Access Network State” permissions** are enabled in the export template so ads can load  
 
 ---
 
+
+## Demo Project
+
+You can try the plugin instantly with the **demo project**:
+
+- **Project Name:** `demo-unity-ads`  
+- **Godot Version:** 4.5.beta4  
+- **Contents:** Pre-configured scene with a UnityAdsNode for interstitial and banner ads  
+- **How to Use:**  
+  1. Open the `demo-unity-ads` project in Godot 4.5.beta4  
+  2. Enable the **UnityAds_By_Hakim** plugin  
+  3. Run the scene to see test ads (interstitial and banner) in action  
+
+> ⚠️ Remember: Internet & network access must be enabled in the Android export template for ads to load.
 ## License
 
 **MIT License** – free to use, modify, and distribute. See `LICENSE`.
