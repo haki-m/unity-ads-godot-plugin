@@ -1,0 +1,51 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Demo-Unity-Ads"
+config/description="This demo project shows how to use the UnityAds_By_Hakim plugin in Godot.
+It includes a simple scene with a UnityAdsNode and buttons to:
+
+- Show an interstitial ad
+- Load a banner
+- Show a banner
+- Hide a banner
+
+Signals are connected to print messages when ads load, fail, or display.
+
+To test:
+
+- Enable the plugin in your project.
+- Add your Unity Ads Game ID in the UnityAdsNode inspector.
+- Run the scene on an Android device."
+run/main_scene="uid://bddbcx72wktw5"
+config/features=PackedStringArray("4.5", "Mobile")
+boot_splash/bg_color=Color(0.040043246, 0.52179694, 0.9999998, 1)
+boot_splash/image="uid://dbbt6hbu11hub"
+config/icon="uid://dbbt6hbu11hub"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=640
+window/size/window_height_override=360
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/UnityFolder/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

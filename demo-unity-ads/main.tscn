@@ -1,0 +1,134 @@
+[gd_scene load_steps=3 format=3 uid="uid://bddbcx72wktw5"]
+
+[ext_resource type="Script" uid="uid://dismkun3vh4s6" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dp8ex120bxvw" path="res://addons/UnityFolder/UnityAds.gd" id="2_0xm2m"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="UnityAdsNode" type="Node" parent="."]
+script = ExtResource("2_0xm2m")
+game_id = "1480510"
+metadata/_custom_type_script = "uid://dp8ex120bxvw"
+
+[node name="load_banner" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104166664
+anchor_top = 0.72480005
+anchor_right = 0.39583334
+anchor_bottom = 0.90998524
+theme_override_font_sizes/font_size = 30
+text = "Load Banner"
+metadata/_edit_use_anchors_ = true
+
+[node name="show_banner" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104166664
+anchor_top = 0.47777778
+anchor_right = 0.22916667
+anchor_bottom = 0.662963
+theme_override_font_sizes/font_size = 30
+text = "Show Banner"
+metadata/_edit_use_anchors_ = true
+
+[node name="hide_banner" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27083334
+anchor_top = 0.47777778
+anchor_right = 0.39583334
+anchor_bottom = 0.662963
+theme_override_font_sizes/font_size = 30
+text = "Hide Banner"
+metadata/_edit_use_anchors_ = true
+
+[node name="load_interstitial" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5833333
+anchor_top = 0.7
+anchor_right = 0.8958334
+anchor_bottom = 0.8851852
+theme_override_font_sizes/font_size = 30
+text = "Load interstitial"
+metadata/_edit_use_anchors_ = true
+
+[node name="show_interstitial" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5833333
+anchor_top = 0.47777778
+anchor_right = 0.8958334
+anchor_bottom = 0.662963
+theme_override_font_sizes/font_size = 30
+text = "Load interstitial"
+metadata/_edit_use_anchors_ = true
+
+[node name="banner_noty" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104166664
+anchor_top = 0.2962963
+anchor_right = 0.39583334
+anchor_bottom = 0.4037037
+theme_override_font_sizes/font_size = 40
+text = "Ads not started yet"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="interstitial_noty" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5833333
+anchor_top = 0.2962963
+anchor_right = 0.8958334
+anchor_bottom = 0.4037037
+theme_override_font_sizes/font_size = 40
+text = "Ads not started yet"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="noty" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.11111111
+theme_override_colors/font_color = Color(1, 0.796875, 0, 1)
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9259259
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 20
+text = "Created By ABDELHAKIM"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="ad_failed" from="UnityAdsNode" to="." method="_on_unity_ads_node_ad_failed"]
+[connection signal="ad_loaded" from="UnityAdsNode" to="." method="_on_unity_ads_node_ad_loaded"]
+[connection signal="ad_shown_complete" from="UnityAdsNode" to="." method="_on_unity_ads_node_ad_shown_complete"]
+[connection signal="banner_failed" from="UnityAdsNode" to="." method="_on_unity_ads_node_banner_failed"]
+[connection signal="banner_loaded" from="UnityAdsNode" to="." method="_on_unity_ads_node_banner_loaded"]
+[connection signal="initialized" from="UnityAdsNode" to="." method="_on_unity_ads_node_initialized"]
+[connection signal="pressed" from="load_banner" to="." method="_on_load_banner_pressed"]
+[connection signal="pressed" from="show_banner" to="." method="_on_show_banner_pressed"]
+[connection signal="pressed" from="hide_banner" to="." method="_on_hide_banner_pressed"]
+[connection signal="pressed" from="load_interstitial" to="." method="_on_load_interstitial_pressed"]
+[connection signal="pressed" from="show_interstitial" to="." method="_on_show_interstitial_pressed"]
